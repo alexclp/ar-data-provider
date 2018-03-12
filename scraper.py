@@ -18,6 +18,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 app = Flask(__name__)
 
+if __name__ == '__main__':
+    app.run()
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -125,6 +128,6 @@ def runIt(room):
     driver.switch_to_window(driver.window_handles[0])
 
     driver.quit()
-    
+
     # driver = None
     return jsonify(course_data)
