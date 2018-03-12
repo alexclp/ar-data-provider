@@ -31,7 +31,7 @@ class bcolors:
 driver = None
 
 def getOrCreateWebdriver():
-    chrome_options = ChromeOptions()
+    chrome_options = Options()
     chrome_options.binary_location = "/app/.apt/usr/bin/google-chrome-stable"
     # timeout after 1 second
     chrome_options.add_argument('--timeout 1000')
@@ -125,6 +125,5 @@ def runIt(room):
     driver.switch_to_window(driver.window_handles[0])
 
     driver.quit()
-
     # driver = None
     return jsonify(course_data)
