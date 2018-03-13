@@ -88,6 +88,7 @@ def parse_pc_free(room):
     driver.get("http://pcfree.kcl.ac.uk/strand/")
     sleep(1)
     result = {"result": get_available_computers(room)}
+    driver.quit()
     return jsonify(result)
 
 @app.route("/timetable/<room>")
